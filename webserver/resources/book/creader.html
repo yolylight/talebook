@@ -13,11 +13,11 @@
   <link rel="icon" href="{{RES}}/logo/favicon.ico" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
   <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
-  <link rel="stylesheet" crossorigin href="style.css?v={{ CANDLE_READER_VERSION }}">
+  <link rel="stylesheet" crossorigin href="style.css?v=v26.10.9">
 
   <script src="js/epub-v0.3.88.js"></script>
   <script type="module">
-    import { Reader } from "./candle-reader.es.js?v={{ CANDLE_READER_VERSION }}"
+    import { Reader } from "./candle-reader.es.js?v=v26.10.9"
 
     // 阅读器不直接请求任何后端：划线、评论、回复、赞踩、登录态与听书都通过下面两组回调交给 Talebook。
     // 回调契约见 candle-reader 的 DESIGN.md。
@@ -155,7 +155,7 @@
       document.getElementById('converting').style.display = 'none'
       new Reader('#app', {
         debug: false,
-        themes_css: "{{RES}}/static/candle-reader/css/themes.css?v={{ CANDLE_READER_VERSION }}",
+        themes_css: "{{RES}}/static/candle-reader/css/themes.css?v=v26.10.9",
         book_url: "{{RES}}{{epub_dir}}/",
         display_url: "",
         book_id: {{ book.id }},
